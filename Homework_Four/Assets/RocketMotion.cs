@@ -24,7 +24,7 @@ public class RocketMotion : MonoBehaviour
 
     void ProcessThrust()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.W))
         {
             // Debug.Log("Space bar is pushed");
             rigidbody.AddRelativeForce(Vector3.up * Time.deltaTime * rocketThrust);
@@ -40,11 +40,11 @@ public class RocketMotion : MonoBehaviour
     }
     void ProcessRotation()
     {
-        if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.L))
         {
             transform.Rotate(Vector3.forward * Time.deltaTime * rocketRotation);
         }
-        else if(Input.GetKey(KeyCode.D))
+        else if(Input.GetKey(KeyCode.J))
         {
             transform.Rotate(Vector3.back * Time.deltaTime * rocketRotation);
         }
